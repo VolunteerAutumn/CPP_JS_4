@@ -1,0 +1,40 @@
+let array = [];
+for (let i = 0; i < 10; i++)
+{
+    array.push(Math.round(Math.random()*10))
+}
+
+function PrintArray(array)
+{
+    console.log(array)
+}
+
+function OnlyEven(array)
+{
+    for (let i = 0; i < array.length; i++)
+    {
+        if (array[i] % 2 === 0)
+        {
+            console.log(`${array[i]}, `)
+        }
+    }
+}
+
+function SumArray(array)
+{
+    res = 0;
+    for (let i = 0; i < array.length; i++)
+    {
+        res += array[i];
+    }
+    console.log(`Sum of the array: ${res}`)
+}
+
+function Insert(array, index)
+{
+    
+}
+
+PrintArray(array)
+OnlyEven(array)
+SumArray(array)
