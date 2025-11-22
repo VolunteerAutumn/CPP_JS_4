@@ -68,3 +68,6 @@ int main()
 		delete[] A[i];
 	delete[] A;
 }
+
+// i added this comment lol
+// jopa
