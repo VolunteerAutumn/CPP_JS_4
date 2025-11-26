@@ -124,3 +124,39 @@ let v3 = Number(prompt("Enter third numbah: "));
 console.log(`The bigger one is ${ReturnMaxThree(v1, v2, v3)} `);
 
 // 11
+const targetDate = new Date(2025, 11, 31, 23, 59, 59);
+
+function countdown() {
+    const now = new Date();
+    const diff = targetDate - now;
+
+    if (diff <= 0) {
+        console.log("Time's up! 🎉🔥");
+        clearInterval(timer);
+        return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    console.log(`Time left: ${days} days ${hours} hours ${minutes} minutes ${seconds} seconds 😈🔥`);
+}
+
+const timer = setInterval(countdown, 1000);
+
+// 12
+function showTime() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+
+    console.clear();
+    console.log(`${hours}:${minutes}:${seconds}`);
+}
+
+setInterval(showTime, 1000);
+
+// idk about colors so no 13
